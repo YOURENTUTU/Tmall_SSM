@@ -53,7 +53,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 				"/admin"
 		};
 		String uri = request.getRequestURI();
-		System.out.println(uri);
 		if (!Arrays.asList(noNeedAuthPage).contains(uri)) {
 			User user = (User) session.getAttribute("user");
 			if (null == user) {
